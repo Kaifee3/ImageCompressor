@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compression with Size Range</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="content-box">
+        <h2>Image Compression with Size Range</h2>
+        <label for="range">Select size range:</label>
+        <select id="range" name="range">
+            <option value="0-50">Under 50 KB</option>
+            <option value="50-100">50 - 100 KB</option>
+            <option value="100-200" selected>100 - 200 KB</option>
+            <option value="200-500">200 - 500 KB</option>
+            <option value="1024">Under 1 MB</option>
+        </select>
+        <p>Only allow images</p>
+        <input type="file" id="fileInput" accept="image/*" multiple />
+        <button id="compressBtn" style="display:none;">Compress Images</button>
+        <p id="tip" style="display:none;"></p>
+        <div id="previews"></div>
+        <button id="downloadBtn" style="display:none;">Download Compressed Images</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
